@@ -1,0 +1,12 @@
+name: server-info
+version: 0.1
+description: Server info web service
+keywords:
+  - server-info
+  - http
+home: http://github.com/kubernetes/helm
+source:
+  - https://github.com/shayanh/server-info
+maintainers:
+  - name: Shayan Hosseini
+  - email: shayan@cafebazaar.ir

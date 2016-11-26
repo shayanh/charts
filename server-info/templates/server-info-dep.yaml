@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: server-info-deployment
+spec:
+  replicas: "{{.Values.Replicas}}"
+  template:
+    metadata:
+      labels:
+        name: {{.Release.Name}}-server-info
+        mode: standalone
+        provider: {{.Release.Name}}-server-info
+        app: server-info
+    spec:
+      containers:
+      - name: {{.Release.Name}}-server-info
+        image: quay.io/shayan_hosseiny/server-info
+        ports:
+        - containerPort: "{{.Values.Port}}"
